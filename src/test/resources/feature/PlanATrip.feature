@@ -5,7 +5,6 @@ Feature: Plan a trip on the Budapest Go site
     And I accept privacy policy
 
   Scenario: Plan a trip
-    When I enter text '' into from field
-    And I enter text '' into to field
-    And I click on Plan button
-    Then I should see some Suggested itineraries
+    When I type "Örs vezér tere" in from field
+    And I type 'Blaha Lujza tér' in to field
+    Then I should see some possible routes
