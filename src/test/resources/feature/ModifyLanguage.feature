@@ -8,10 +8,10 @@ Feature: Modify the language on the Budapest Go site
 
     Scenario: When I press the Hungarian flag button, language changes to Hungarian
       Given language is set to 'English'
-      When I click on the 'Hungarian' flag
+      When I select the 'Hungarian' flag
       Then language is changed to 'Hungarian'
 
     Scenario: When I press the English flag button, language changes to English
       Given language is set to 'Hungarian'
-      When I click on the 'English' flag
+      When I select the 'English' flag
       Then language is changed to 'English'
