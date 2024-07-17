@@ -7,4 +7,5 @@ Feature: Plan a trip on the Budapest Go site
   Scenario: Plan a trip
     When I type "Örs vezér tere" in from field
     And I type 'Blaha Lujza tér' in to field
+    And I click on Plan button
     Then I should see some possible routes
