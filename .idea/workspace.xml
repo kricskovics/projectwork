@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e23f7146-71a8-43af-bd67-35d03e21307f" name="Changes" comment="day2.0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/feature/PlanATrip.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature/PlanATrip.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/feature/ReportABug.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature/ReportABug.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/feature/SearchForARoute.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature/SearchForARoute.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/feature/SearchForAnAddress.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature/SearchForAnAddress.feature" afterDir="false" />
+    <list default="true" id="e23f7146-71a8-43af-bd67-35d03e21307f" name="Changes" comment="day2.1">
+      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/steps/BKKGoSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/steps/BKKGoSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721125982443</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="day2.1">
+      <option name="closed" value="true" />
+      <created>1721127514595</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721127514595</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +160,7 @@
     <MESSAGE value="commit" />
     <MESSAGE value="day1.0" />
     <MESSAGE value="day2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="day2.0" />
+    <MESSAGE value="day2.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="day2.1" />
   </component>
 </project>

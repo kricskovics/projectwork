@@ -76,7 +76,7 @@ public class BKKGoSteps {
     }
 
     @Then("language is changed to {string}")
-    public void languageIsChangedToHungarian(String newLanguage) throws Exception {
+    public void languageIsChangedToHungarian(String newLanguage) {
         if (HomePage.isCurrentLanguageSetToEnglish()) {
             Assertions.assertEquals(ENGLISH_LANGUAGE, newLanguage);
         } else {
