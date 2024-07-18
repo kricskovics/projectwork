@@ -10,20 +10,13 @@ public class ReportBugPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//*[@id=\"panel-inner\"]/p/span[1]/a/span[2]")
-    WebElement reportBug;
-
     @FindBy(xpath = "//*[@id=\"instabugForm\"]/h3")
-    WebElement reportBugResult;
+    static WebElement reportBugResult;
 
-    public void iClickReportBug() {
-        reportBug.click();
-    }
-
-    public void reportBugPageLoaded() {
+    public static void reportBugPageLoaded() {
         isLoaded(reportBugResult);
     }
 
-    private void isLoaded(WebElement reportBugResult) {
+    public static void isLoaded(WebElement reportBugResult) {
     }
 }

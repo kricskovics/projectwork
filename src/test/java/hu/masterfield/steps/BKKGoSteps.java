@@ -2,6 +2,7 @@ package hu.masterfield.steps;
 
 import hu.masterfield.pages.HomePage;
 import hu.masterfield.pages.ReportBugPage;
+import hu.masterfield.pages.TripPlanPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -9,12 +10,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -24,14 +22,9 @@ public class BKKGoSteps {
     private static final String ENGLISH_LANGUAGE = "English";
     private static final String HUNGARIAN_LANGUAGE = "Hungarian";
 
-    public ReportBugPage reportBugPage;
+
     protected static WebDriver driver;
     protected static WebDriverWait wait;
-
-    By fromField = By.xpath("//input[@placeholder='From']");
-    By toField = By.className("planner-to");
-    By planButton = By.xpath("//input[@value='Plan']");
-    By resultTitle = By.xpath("//h2[@class='noprint']");
 
     @Before
     public static void setup() {
@@ -96,33 +89,31 @@ public class BKKGoSteps {
 
     @When("I type {string} in from field")
     public void fillFromField(String departure) {
-        driver.findElement(fromField).sendKeys(departure + Keys.TAB);
+        HomePage.fillFromField(departure);
     }
 
     @And("I type {string} in to field")
     public void fillToField(String destination) {
-        driver.findElement(toField).sendKeys(destination + Keys.TAB);
+        HomePage.fillToField(destination);
     }
 
     @And("I click on Plan button")
     public void clickOnPlanButton() {
-        driver.findElement(planButton).click();
+        HomePage.clickOnPlanButton();
     }
 
     @Then("I should see some possible routes")
     public void assertSuggestedItineraries() {
-        wait.until(ExpectedConditions.presenceOfElementLocated(resultTitle));
-        String resultText = driver.findElement(resultTitle).getText();
-        Assertions.assertEquals("Suggested itineraries", resultText);
+        TripPlanPage.assertSuggestedItineraries();
     }
 
     @When("I Start a Report a bug")
     public void IclickReportaBug() {
-        reportBugPage.iClickReportBug();
+        HomePage.iClickReportBug();
     }
 
     @Then("Report bug page opens")
     public void reportABugPageIsOpened() {
-        reportBugPage.reportBugPageLoaded();
+        ReportBugPage.reportBugPageLoaded();
     }
 }

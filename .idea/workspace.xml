@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e23f7146-71a8-43af-bd67-35d03e21307f" name="Changes" comment="day3.2">
-      <change afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/ReportBugPage.java" afterDir="false" />
+    <list default="true" id="e23f7146-71a8-43af-bd67-35d03e21307f" name="Changes" comment="day4.1">
+      <change afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/TripPlanPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/ReportBugPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/ReportBugPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/steps/BKKGoSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/steps/BKKGoSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/feature/PlanATrip.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature/PlanATrip.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,12 +58,14 @@
   "keyToString": {
     "Cucumber Java.Feature: ModifyLanguage.executor": "Run",
     "Cucumber Java.Feature: PlanATrip.executor": "Run",
+    "Cucumber Java.Feature: ReportABug.executor": "Run",
     "Cucumber Java.Scenario: Plan a trip.executor": "Run",
+    "Cucumber Java.Scenario: Report a bug.executor": "Run",
     "Cucumber Java.Scenario: When I press the Hungarian flag button, language changes to Hungarian.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/DT/Selenide",
+    "last_opened_file_path": "C:/Users/Student/final/projectwork-master",
     "settings.editor.selected.configurable": "actions.on.save"
   }
 }]]></component>
@@ -70,7 +74,7 @@
       <recent name="C:\DT\projectwork\src\test\java\hu\masterfield\browser" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: ModifyLanguage">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Plan a trip">
     <configuration name="Feature: ModifyLanguage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/feature/ModifyLanguage.feature" />
@@ -109,6 +113,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Feature: ReportABug" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/feature/ReportABug.feature" />
+      <option name="GLUE" value="hu.masterfield.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="projectwork" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: ReportABug" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: Plan a trip" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/feature/PlanATrip.feature" />
@@ -129,15 +152,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: When I press the Hungarian flag button, language changes to Hungarian" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Report a bug" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/feature/ModifyLanguage.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/feature/ReportABug.feature" />
       <option name="GLUE" value="hu.masterfield.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="projectwork" />
-      <option name="NAME_FILTER" value="^When I press the Hungarian flag button\, language changes to Hungarian$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^When I press the Hungarian flag button\, language changes to Hungarian$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: When I press the Hungarian flag button, language changes to Hungarian" />
+      <option name="NAME_FILTER" value="^Report a bug$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Report a bug$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Report a bug" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -151,10 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: ModifyLanguage" />
         <item itemvalue="Cucumber Java.Scenario: Plan a trip" />
+        <item itemvalue="Cucumber Java.Scenario: Report a bug" />
+        <item itemvalue="Cucumber Java.Feature: ModifyLanguage" />
+        <item itemvalue="Cucumber Java.Feature: ReportABug" />
         <item itemvalue="Cucumber Java.Feature: PlanATrip" />
-        <item itemvalue="Cucumber Java.Scenario: When I press the Hungarian flag button, language changes to Hungarian" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721215989051</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="day4.1">
+      <option name="closed" value="true" />
+      <created>1721290155283</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1721290155283</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +294,7 @@
     <MESSAGE value="day2.2" />
     <MESSAGE value="day3.1" />
     <MESSAGE value="day3.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="day3.2" />
+    <MESSAGE value="day4.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="day4.1" />
   </component>
 </project>
