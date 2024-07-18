@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e23f7146-71a8-43af-bd67-35d03e21307f" name="Changes" comment="day3.1">
+    <list default="true" id="e23f7146-71a8-43af-bd67-35d03e21307f" name="Changes" comment="day3.2">
+      <change afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/ReportBugPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/steps/BKKGoSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/steps/BKKGoSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/feature/PlanATrip.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature/PlanATrip.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Student/final/projectwork-master",
+    "last_opened_file_path": "C:/DT/Selenide",
     "settings.editor.selected.configurable": "actions.on.save"
   }
 }]]></component>
@@ -67,7 +70,7 @@
       <recent name="C:\DT\projectwork\src\test\java\hu\masterfield\browser" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: PlanATrip">
+  <component name="RunManager" selected="Cucumber Java.Feature: ModifyLanguage">
     <configuration name="Feature: ModifyLanguage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/feature/ModifyLanguage.feature" />
@@ -148,10 +151,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: PlanATrip" />
         <item itemvalue="Cucumber Java.Feature: ModifyLanguage" />
-        <item itemvalue="Cucumber Java.Scenario: When I press the Hungarian flag button, language changes to Hungarian" />
         <item itemvalue="Cucumber Java.Scenario: Plan a trip" />
+        <item itemvalue="Cucumber Java.Feature: PlanATrip" />
+        <item itemvalue="Cucumber Java.Scenario: When I press the Hungarian flag button, language changes to Hungarian" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721213231243</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="day3.2">
+      <option name="closed" value="true" />
+      <created>1721215989051</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1721215989051</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,6 +261,7 @@
     <MESSAGE value="day2.1" />
     <MESSAGE value="day2.2" />
     <MESSAGE value="day3.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="day3.1" />
+    <MESSAGE value="day3.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="day3.2" />
   </component>
 </project>

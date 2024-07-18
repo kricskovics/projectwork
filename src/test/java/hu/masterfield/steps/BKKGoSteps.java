@@ -1,6 +1,7 @@
 package hu.masterfield.steps;
 
 import hu.masterfield.pages.HomePage;
+import hu.masterfield.pages.ReportBugPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -23,6 +24,7 @@ public class BKKGoSteps {
     private static final String ENGLISH_LANGUAGE = "English";
     private static final String HUNGARIAN_LANGUAGE = "Hungarian";
 
+    public ReportBugPage reportBugPage;
     protected static WebDriver driver;
     protected static WebDriverWait wait;
 
@@ -112,5 +114,15 @@ public class BKKGoSteps {
         wait.until(ExpectedConditions.presenceOfElementLocated(resultTitle));
         String resultText = driver.findElement(resultTitle).getText();
         Assertions.assertEquals("Suggested itineraries", resultText);
+    }
+
+    @When("I Start a Report a bug")
+    public void IclickReportaBug() {
+        reportBugPage.iClickReportBug();
+    }
+
+    @Then("Report bug page opens")
+    public void reportABugPageIsOpened() {
+        reportBugPage.reportBugPageLoaded();
     }
 }
