@@ -19,12 +19,11 @@ import java.time.Duration;
 
 public class BKKGoSteps {
 
-    private static final String ENGLISH_LANGUAGE = "English";
-    private static final String HUNGARIAN_LANGUAGE = "Hungarian";
+    private final String ENGLISH_LANGUAGE = "English";
+    private final String HUNGARIAN_LANGUAGE = "Hungarian";
 
-
-    protected static WebDriver driver;
-    protected static WebDriverWait wait;
+    protected WebDriver driver;
+    protected WebDriverWait wait;
 
     HomePage homePage;
     ReportBugPage reportBugPage;
@@ -50,7 +49,7 @@ public class BKKGoSteps {
     @Given("I open Budapest Go site")
     public void iOpenBKKWebsite() {
         driver.get("https://go.bkk.hu/");
-        HomePage homePage = new HomePage(driver);
+        this.homePage = new HomePage(driver);
     }
 
     @And("I accept privacy policy")
@@ -91,26 +90,6 @@ public class BKKGoSteps {
         }
     }
 
-    @When("I type {string} in from field")
-    public void fillFromField(String departure) {
-        homePage.fillFromField(departure);
-    }
-
-    @And("I type {string} in to field")
-    public void fillToField(String destination) {
-        homePage.fillToField(destination);
-    }
-
-    @And("I click on Plan button")
-    public void clickOnPlanButton() {
-        tripPlanPage = homePage.clickOnPlanButton();
-    }
-
-    @Then("I should see some possible routes")
-    public void assertSuggestedItineraries() {
-        tripPlanPage.assertSuggestedItineraries();
-    }
-
     @When("I Start a Report a bug")
     public void IclickReportaBug() {
         homePage.iClickReportBug();
@@ -119,5 +98,15 @@ public class BKKGoSteps {
     @Then("Report bug page opens")
     public void reportABugPageIsOpened() {
         reportBugPage.reportBugPageLoaded();
+    }
+
+    @When("I plan a trip from {string} to {string}")
+    public void iPlanATripFromTo(String departure, String destination) {
+        tripPlanPage = homePage.plan(departure, destination);
+    }
+
+    @Then("I should see some possible routes")
+    public void assertSuggestedItineraries() {
+        tripPlanPage.assertSuggestedItineraries();
     }
 }

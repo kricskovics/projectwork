@@ -16,7 +16,4 @@ public class ReportBugPage extends BasePage {
     public void reportBugPageLoaded() {
         isLoaded(reportBugResult);
     }
-
-    public void isLoaded(WebElement reportBugResult) {
-    }
 }

@@ -69,10 +69,11 @@ public class HomePage extends BasePage {
         toField.sendKeys(destination + Keys.TAB);
     }
 
-    public clickOnPlanButton() {
+    public TripPlanPage plan(String departure, String destination) {
+        fromField.sendKeys(departure + Keys.TAB);
+        toField.sendKeys(destination + Keys.TAB);
         planButton.click();
-        TripPlanPage tripPlanPage = new TripPlanPage(driver);
-        return tripPlanPage;
+        return new TripPlanPage(driver);
     }
 
 }
