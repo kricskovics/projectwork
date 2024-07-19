@@ -13,10 +13,10 @@ public class ReportBugPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"instabugForm\"]/h3")
     static WebElement reportBugResult;
 
-    public static void reportBugPageLoaded() {
+    public void reportBugPageLoaded() {
         isLoaded(reportBugResult);
     }
 
-    public static void isLoaded(WebElement reportBugResult) {
+    public void isLoaded(WebElement reportBugResult) {
     }
 }

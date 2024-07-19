@@ -13,64 +13,66 @@ public class HomePage extends BasePage {
     }
 
     @FindBy(xpath = "//button[text()='Accept']")
-    static WebElement privacyPolicyElement;
+    WebElement privacyPolicyElement;
 
     @FindBy(tagName = "h2")
-    static WebElement currentLanguageElement;
+    WebElement currentLanguageElement;
 
     @FindBy(xpath = "//span[@title='english']")
-    static WebElement englishFlag;
+    WebElement englishFlag;
 
     @FindBy(xpath = "//span[@title='magyar']")
-    static WebElement hungarianFlag;
+    WebElement hungarianFlag;
 
     @FindBy(xpath = "//*[@id=\"panel-inner\"]/p/span[1]/a/span[2]")
-    static WebElement reportBug;
+    WebElement reportBug;
 
     @FindBy(xpath = "//input[@placeholder='From']")
-    static WebElement fromField;
+    WebElement fromField;
 
     @FindBy(className = "planner-to")
-    static WebElement toField;
+    WebElement toField;
 
     @FindBy(xpath = "//input[@value='Plan']")
-    static WebElement planButton;
+    WebElement planButton;
 
-    public static void clickOnEnglishFlag() {
+    public void clickOnEnglishFlag() {
         englishFlag.click();
     }
 
-    public static void clickOnHungarianFlag() {
+    public void clickOnHungarianFlag() {
         hungarianFlag.click();
     }
 
-    public static String getCurrentLanguageName() {
+    public String getCurrentLanguageName() {
         return currentLanguageElement.getText();
     }
 
-    public static boolean isCurrentLanguageSetToEnglish() {
+    public boolean isCurrentLanguageSetToEnglish() {
         return getCurrentLanguageName().equals("Trip Planner");
     }
 
-    public static void clickOnPrivacyPolicy() {
+    public void clickOnPrivacyPolicy() {
         privacyPolicyElement.click();
     }
 
-    public static void iClickReportBug() {
+    public void iClickReportBug() {
         reportBug.click();
         new ReportBugPage(driver);
     }
 
-    public static void fillFromField(String departure) {
+    public void fillFromField(String departure) {
         fromField.sendKeys(departure + Keys.TAB);
     }
 
-    public static void fillToField(String destination) {
+    public void fillToField(String destination) {
         toField.sendKeys(destination + Keys.TAB);
     }
 
-    public static void clickOnPlanButton() {
+    public clickOnPlanButton() {
         planButton.click();
+        TripPlanPage tripPlanPage = new TripPlanPage(driver);
+        return tripPlanPage;
     }
 
 }

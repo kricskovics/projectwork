@@ -26,8 +26,12 @@ public class BKKGoSteps {
     protected static WebDriver driver;
     protected static WebDriverWait wait;
 
+    HomePage homePage;
+    ReportBugPage reportBugPage;
+    TripPlanPage tripPlanPage;
+
     @Before
-    public static void setup() {
+    public void setup() {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
 
@@ -51,18 +55,18 @@ public class BKKGoSteps {
 
     @And("I accept privacy policy")
     public void iAcceptPrivacyPolicy() {
-        HomePage.clickOnPrivacyPolicy();
+        homePage.clickOnPrivacyPolicy();
     }
 
     @Given("language is set to {string}")
     public void languageIsSetToEnglish(String expectedLanguage) {
-        if (HomePage.isCurrentLanguageSetToEnglish()) {
+        if (homePage.isCurrentLanguageSetToEnglish()) {
             if (expectedLanguage.equals(HUNGARIAN_LANGUAGE)) {
-                HomePage.clickOnHungarianFlag();
+                homePage.clickOnHungarianFlag();
             }
         } else {
             if (expectedLanguage.equals(ENGLISH_LANGUAGE)) {
-                HomePage.clickOnEnglishFlag();
+                homePage.clickOnEnglishFlag();
             }
         }
     }
@@ -70,9 +74,9 @@ public class BKKGoSteps {
     @When("I select the {string} flag")
     public void iClickOnTheHungarianFlag(String flagName) throws Exception {
         if (flagName.equals(ENGLISH_LANGUAGE)) {
-            HomePage.clickOnEnglishFlag();
+            homePage.clickOnEnglishFlag();
         } else if (flagName.equals(HUNGARIAN_LANGUAGE)) {
-            HomePage.clickOnHungarianFlag();
+            homePage.clickOnHungarianFlag();
         } else {
             throw new Exception("Invalid language!");
         }
@@ -80,7 +84,7 @@ public class BKKGoSteps {
 
     @Then("language is changed to {string}")
     public void languageIsChangedToHungarian(String newLanguage) {
-        if (HomePage.isCurrentLanguageSetToEnglish()) {
+        if (homePage.isCurrentLanguageSetToEnglish()) {
             Assertions.assertEquals(ENGLISH_LANGUAGE, newLanguage);
         } else {
             Assertions.assertEquals(HUNGARIAN_LANGUAGE, newLanguage);
@@ -89,31 +93,31 @@ public class BKKGoSteps {
 
     @When("I type {string} in from field")
     public void fillFromField(String departure) {
-        HomePage.fillFromField(departure);
+        homePage.fillFromField(departure);
     }
 
     @And("I type {string} in to field")
     public void fillToField(String destination) {
-        HomePage.fillToField(destination);
+        homePage.fillToField(destination);
     }
 
     @And("I click on Plan button")
     public void clickOnPlanButton() {
-        HomePage.clickOnPlanButton();
+        tripPlanPage = homePage.clickOnPlanButton();
     }
 
     @Then("I should see some possible routes")
     public void assertSuggestedItineraries() {
-        TripPlanPage.assertSuggestedItineraries();
+        tripPlanPage.assertSuggestedItineraries();
     }
 
     @When("I Start a Report a bug")
     public void IclickReportaBug() {
-        HomePage.iClickReportBug();
+        homePage.iClickReportBug();
     }
 
     @Then("Report bug page opens")
     public void reportABugPageIsOpened() {
-        ReportBugPage.reportBugPageLoaded();
+        reportBugPage.reportBugPageLoaded();
     }
 }
